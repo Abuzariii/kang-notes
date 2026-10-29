@@ -1,0 +1,26 @@
+{
+  "name": "kang-notes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Notes in a 3D graph, synced between Windows and Android through Firebase",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs",
+    "test": "node test/smoke.mjs",
+    "desktop": "powershell -NoProfile -ExecutionPolicy Bypass -File desktop/build.ps1",
+    "firebase-login": "node tools/firebase.mjs login",
+    "deploy": "node tools/build.mjs && node tools/firebase.mjs deploy --only hosting,firestore:rules --non-interactive"
+  },
+  "dependencies": {
+    "3d-force-graph": "1.80.1",
+    "firebase": "13.1.0",
+    "three": "0.186.1",
+    "three-spritetext": "1.10.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "firebase-tools": "15.34.1",
+    "puppeteer-core": "25.16.0"
+  }
+}

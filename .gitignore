@@ -1,0 +1,16 @@
+# Private: never commit these.
+# Your Firebase login token:
+.firebase-cli/
+# Sign-in session and this PC's offline copy of your notes:
+data/
+# Your notes:
+backups/
+
+# Rebuilt from the source.
+node_modules/
+dist/
+app/
+.firebase/
+.cache/
+test/screens/
+*.log
